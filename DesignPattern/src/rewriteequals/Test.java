@@ -1,0 +1,21 @@
+package rewriteequals;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Test t = new Test();
+		Test anothert = t;
+		t.equals(null);
+		System.out.println(t.hashCode());			//未经重写的equals实质上是对比hashcode()的结果
+		System.out.println(anothert.hashCode());
+		
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+}
