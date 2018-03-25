@@ -1,5 +1,9 @@
 package multithread;
 
+import java.util.Vector;
+
+import innerclass.ExtrendClass;
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -17,6 +21,20 @@ public class Test {
 		Thread thread2 = new Thread(multithread2, "thread2");
 		thread.start();
 		thread2.start();
+		Vector<Integer> vec = new Vector();
+		
+/*******测试innerclass.ExtrendClass中protected访问范围******/
+		ExtrendClass ext = new ExtrendClass();
+		ext.public_method();
+//		ext.protected_method(); 不在同一包内无法访问protected字段
+		
+	}
+}
+
+class TestExtrend extends ExtrendClass{
+	public void method() {
+		public_method();
+		protected_method();		//继承可以访问protected字段
 	}
 }
 

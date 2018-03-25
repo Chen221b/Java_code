@@ -14,12 +14,12 @@ public class MultiThread extends Thread {
  * 修饰方法、对象引用，那么同步作用范围在指向该对象的所有引用。
 ***************************************************************************/
 	public void run() {
-		synchronized (MultiThread.class) {
+//		synchronized (MultiThread.class) {
 			for(int i = 0; i < 10000; i++) {
 				notstatic++;
 				isstatic++;
 			}
-		}
+//		}
 		System.out.println(Thread.currentThread().getName() + "\t" + notstatic + "\t" + isstatic);
 	}
 }
