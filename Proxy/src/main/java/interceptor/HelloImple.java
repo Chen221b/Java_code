@@ -5,4 +5,8 @@ public class HelloImple implements Hello {
     public void sayHello() {
         System.out.println("Hello");
     }
+
+    public void selfMethod(){
+        System.out.println("Not Implements Method");
+    }
 }

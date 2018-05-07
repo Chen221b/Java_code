@@ -1,5 +1,7 @@
 package interceptor;
 
+import proxy.HelloImpl;
+
 /*责任链模式配合多拦截器使用例子*/
 public class Main {
     public static void main(String[] args){

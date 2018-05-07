@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--MyBatis配置项不能颠倒，必须按顺序-->
+<configuration>
+    <!--pojo类别名-->
+    <typeAliases>
+        <typeAlias alias="role" type="com.damon.mybatis.example.Role"/>
+    </typeAliases>
+    <!--数据库环境-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/damon"/>
+                <property name="username" value="root"/>
+                <property name="password" value="damon"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--映射文件-->
+    <mappers>
+        <mapper resource="com/damon/mybatis/example/RoleMapper.xml"/>
+    </mappers>
+</configuration>
