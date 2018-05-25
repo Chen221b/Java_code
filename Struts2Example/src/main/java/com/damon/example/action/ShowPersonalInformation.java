@@ -1,7 +1,7 @@
 package com.damon.example.action;
 
 import com.damon.example.model.Person;
-import com.opensymphony.xwork2.ActionSupport;
+
 
 public class ShowPersonalInformation extends ActionSupport{
 	private Person person;
